@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>DiceRoll.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+DiceRoll.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.*</span><span class="s0">; </span><span class="s2">//for Random Function</span>
+
+<span class="s0">public class </span><span class="s1">DiceRoll {</span>
+
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Lets roll some dice!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">Random rand = </span><span class="s0">new </span><span class="s1">Random()</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">odds = </span><span class="s4">0</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">rolls = </span><span class="s4">0</span><span class="s0">;</span>
+        <span class="s0">while </span><span class="s1">(odds &lt; </span><span class="s4">3</span><span class="s1">) {</span>
+
+            <span class="s0">int </span><span class="s1">roll = rand.nextInt(</span><span class="s4">7</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">rolls++</span><span class="s0">;</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;You rolled a &quot; </span><span class="s1">+ roll)</span><span class="s0">;</span>
+            <span class="s0">if </span><span class="s1">(roll % </span><span class="s4">2 </span><span class="s1">== </span><span class="s4">1</span><span class="s1">) {</span>
+                <span class="s1">odds++</span><span class="s0">;</span>
+            <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                <span class="s1">odds = </span><span class="s4">0</span><span class="s0">;</span>
+            <span class="s1">}</span>
+
+        <span class="s1">}</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Three in a row after &quot; </span><span class="s1">+ rolls + </span><span class="s3">&quot; rolls&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
